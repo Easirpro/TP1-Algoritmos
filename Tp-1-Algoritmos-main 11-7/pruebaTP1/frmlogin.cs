@@ -14,7 +14,7 @@ namespace pruebaTP1
 
         private void Helpbutton1_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show("Ingrese su usuario y contraseña para acceder.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Ingrese su usuario y contraseÃ±a para acceder.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void lnkrecu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -24,20 +24,13 @@ namespace pruebaTP1
             form.ShowDialog();
             this.Show();
         }
-        
-        private void VerificarCampos()
-        {
-            Btnenter.Enabled = Txtusuario.Text.Length > 3 && Txtpass.Text.Length > 3;
-        }
 
         private void Txtusuario_TextChanged(object? sender, EventArgs e)
         {
-            VerificarCampos();
         }
 
         private void Txtpass_TextChanged(object? sender, EventArgs e)
         {
-            VerificarCampos();
         }
 
         private void Txtusuario_TextChanged_1(object? sender, EventArgs e)
@@ -78,7 +71,7 @@ namespace pruebaTP1
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseÃ±a incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
