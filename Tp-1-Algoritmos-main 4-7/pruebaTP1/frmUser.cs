@@ -31,7 +31,6 @@ namespace pruebaTP1
 
             MostrarDatosUsuario();
             HabilitarEdicion(false);
-
         }
         private void MostrarDatosUsuario()
         {
@@ -56,15 +55,31 @@ namespace pruebaTP1
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
-            DatosUsuario.Nombre = txtNombre.Text;
-            DatosUsuario.Apellido = txtApellido.Text;
-            DatosUsuario.Dni = txtDni.Text;
-            DatosUsuario.Telefono = txtTelefono.Text;
-            DatosUsuario.Email = txtEmail.Text;
-            DatosUsuario.Password = txtPasswordUsuario.Text;
+        if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) ||string.IsNullOrWhiteSpace(txtDni.Text) || string.IsNullOrWhiteSpace(txtTelefono.Text) ||string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtPasswordUsuario.Text))
+        {
+        MessageBox.Show("Todos los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        return;
+        }
+        if (!long.TryParse(txtDni.Text, out _) || !long.TryParse(txtTelefono.Text, out _))
+        {
+        MessageBox.Show("El DNI y el Teléfono deben ser numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        return;
+        }
+        if (txtDni.Text.Length != 8 || txtTelefono.Text.Length != 8)
+        {
+        MessageBox.Show("El DNI y el Teléfono deben tener 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        return;
+        }
 
-            HabilitarEdicion(false);
-            MessageBox.Show("Datos guardados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    DatosUsuario.Nombre = txtNombre.Text;
+    DatosUsuario.Apellido = txtApellido.Text;
+    DatosUsuario.Dni = txtDni.Text;
+    DatosUsuario.Telefono = txtTelefono.Text;
+    DatosUsuario.Email = txtEmail.Text;
+    DatosUsuario.Password = txtPasswordUsuario.Text;
+
+    HabilitarEdicion(false);
+    MessageBox.Show("Datos guardados correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
