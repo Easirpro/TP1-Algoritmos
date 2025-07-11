@@ -78,9 +78,9 @@ namespace pruebaTP1
                 MessageBox.Show("El DNI y el Teléfono deben ser numéricos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (txtDni.Text.Length != 8)
+            if (txtDni.Text.Length < 7 || txtDni.Text.Length > 8)
             {
-                MessageBox.Show("El DNI debe tener 8 dígitos al menos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El DNI debe tener 7 o 8 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (txtTelefono.Text.Length < 8 || txtTelefono.Text.Length > 10)
