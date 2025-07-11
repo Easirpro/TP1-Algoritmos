@@ -14,7 +14,7 @@ namespace pruebaTP1
 
         private void Helpbutton1_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show("Ingrese su usuario y contraseña para acceder.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Ingrese su usuario y contraseÃ±a para acceder.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void lnkrecu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -67,18 +67,18 @@ namespace pruebaTP1
                 if (DatosUsuario.Rol == "Administrador")
                 {
                     frmAdmin form = new frmAdmin();
-                    form.Show();
+                    form.ShowDialog();
                 }
                 else
                 {
                     frmUser form = new frmUser();
-                    form.Show();
+                    form.ShowDialog();
                 }
                 this.Show();
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseÃ±a incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
