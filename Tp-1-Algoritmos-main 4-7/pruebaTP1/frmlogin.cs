@@ -11,17 +11,10 @@ namespace pruebaTP1
             this.HelpButtonClicked += Helpbutton1_Click;
             this.AcceptButton = Btnenter; 
         }
-        private void LimpiarCampos()
-        {
-            Txtusuario.Clear();
-            Txtpass.Clear();
-            this.Show();
-            Txtusuario.Focus();
-        }
 
         private void Helpbutton1_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show("Ingrese su usuario y contraseña para acceder.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Ingrese su usuario y contraseÃ±a para acceder.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void lnkrecu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -29,13 +22,7 @@ namespace pruebaTP1
             frmRecover form = new frmRecover();
             this.Hide();
             form.ShowDialog();
-            LimpiarCampos();
-        }
-        
-
-        private void VerificarCampos()
-        {
-            Btnenter.Enabled = Txtusuario.Text.Length > 3 && Txtpass.Text.Length > 3;
+            this.Show();
         }
 
         private void Txtusuario_TextChanged(object? sender, EventArgs e)
@@ -54,29 +41,39 @@ namespace pruebaTP1
 
         private void Btnenter_Click(object sender, EventArgs e)
         {
-            if (Txtusuario.Text == DatosAdmin.Usuario && Txtpass.Text == DatosAdmin.Password)
-            {
-                  
-                frmAdmin form = new frmAdmin();
-                this.Hide();
-                form.ShowDialog();
-                LimpiarCampos();
-            }
-            else if (Txtusuario.Text == DatosUsuario.Usuario && Txtpass.Text == DatosUsuario.Password)
-            {
-
-               
-                frmUser form = new();
-                this.Hide();
-                form.ShowDialog();
-                LimpiarCampos();
-            
+            if (Txtusuario.Text == DatosAdmin.Nombre && Txtpass.Text == DatosAdmin.Password)
+        {
+        this.Hide();
+        if (DatosAdmin.Rol == "Administrador")
+        {
+            frmAdmin form = new frmAdmin();
+            form.ShowDialog();
         }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                LimpiarCampos();
-            }
+        else
+        {
+            frmUser form = new frmUser();
+            form.ShowDialog();
+        }
+        this.Show();
+        }
+        else if (Txtusuario.Text == DatosUsuario.Nombre && Txtpass.Text == DatosUsuario.Password)
+        {
+        this.Hide();
+        if (DatosUsuario.Rol == "Administrador")
+        {
+            frmAdmin form = new frmAdmin();
+            form.Show();
+        }
+        else
+        {
+            frmUser form = new frmUser();
+            form.Show();
+        }
+        this.Show();
+        }
+        else
+        {
+        MessageBox.Show("Usuario o contraseÃ±a incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
