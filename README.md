@@ -3,10 +3,10 @@ Trabajo Grupal de Algoritmos - Formularios:
 
 #Integrantes:
 
-De León Javier,
+De León Javier,  deleonjav67@gmail.com
 
 Ferreyra Marcelo,  marce.reparacion@gmail.com
 
-Ramil Micaías,
+Ramil Micaías,  micram2006@gmail.com
 
-Vall Matías
+Vall Matías,  matiasdvall@gmail.com
