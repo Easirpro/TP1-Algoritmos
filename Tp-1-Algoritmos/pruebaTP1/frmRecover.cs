@@ -95,7 +95,14 @@ namespace pruebaTP1
                 return;
             }
             MessageBox.Show("Contraseña actualizada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (correo == DatosAdmin.Email)
+            {
+            DatosAdmin.Password = paso1;
+            }
+            if (correo == DatosUsuario.Email)
+            {
             DatosUsuario.Password = paso1;
+            }
             this.Close();
         }
 
