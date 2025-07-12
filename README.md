@@ -10,3 +10,5 @@ Ferreyra Marcelo,  marce.reparacion@gmail.com
 Ramil Micaías,  micram2006@gmail.com
 
 Vall Matías,  matiasdvall@gmail.com
+
+CÓDIGO DE RECUPERO DE CONTRASEÑA: 1234
