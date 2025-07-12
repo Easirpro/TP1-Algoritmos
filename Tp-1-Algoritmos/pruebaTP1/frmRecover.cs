@@ -40,7 +40,7 @@ namespace pruebaTP1
                 return;
             }
 
-            if (correo != DatosUsuario.Email)
+            if (correo != DatosUsuario.Email && correo != DatosAdmin.Email)
             {
                 lblError.Text = "El correo no está registrado";
                 lblError.Visible = true;
