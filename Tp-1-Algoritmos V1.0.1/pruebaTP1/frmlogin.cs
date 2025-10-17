@@ -42,16 +42,13 @@ namespace pruebaTP1
 
         private void Btnenter_Click(object sender, EventArgs e)
         {
-            //Luego de Source= va la direccion de donde se encuentra el archivo de Access
-            string cadena= "provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\tp_algoritmo.accdb";
+            using OleDbConnection conexion = new DBAccess().GetConnection();
             string consulta="SELECT * FROM datos WHERE nombre='"+Txtusuario.Text+"' AND password='"+Txtpass.Text+"'";           
-            OleDbConnection conexion = new OleDbConnection(cadena);
+            OleDbConnection DBAccess = new OleDbConnection();
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
             OleDbDataAdapter adaptador = new OleDbDataAdapter(comando);
             DataTable datos = new DataTable();
             adaptador.Fill(datos);
-            comando.Parameters.AddWithValue("@Nombre", Txtusuario.Text);
-            comando.Parameters.AddWithValue("@Password", Txtpass.Text);
             if (datos.Rows.Count==1)
             {
                 string rol=datos.Rows[0]["Rol"].ToString();
@@ -82,5 +79,6 @@ namespace pruebaTP1
     }
 
 }
+
 
 
