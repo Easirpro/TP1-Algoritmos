@@ -72,43 +72,7 @@ namespace pruebaTP1
             {
                 MessageBox.Show("Usuario o contraseña incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //if (Txtusuario.Text == DatosAdmin.Nombre && Txtpass.Text == DatosAdmin.Password)
-            //{
-            //    this.Hide();
-            //    if (DatosAdmin.Rol == "Administrador")
-            //    {
-            //        frmAdmin form = new frmAdmin(Txtusuario.Text, DatosAdmin.Rol);
-            //        form.ShowDialog();
-            //    }
-            //    else
-            //    {
-            //        frmUser form = new frmUser();
-            //        form.ShowDialog();
-            //    }
-            //    this.Show();
-            //}
-            //else if (Txtusuario.Text == DatosUsuario.Nombre && Txtpass.Text == DatosUsuario.Password)
-            //{
-            //    this.Hide();
-            //    if (DatosUsuario.Rol == "Administrador")
-            //    {
-            //        frmAdmin form = new frmAdmin(Txtusuario.Text, DatosAdmin.Rol);
-            //        form.ShowDialog();
-            //    }
-            //    else
-            //    {
-            //        frmUser form = new frmUser();
-            //        form.ShowDialog();
-            //    }
-            //    this.Show();
-            //}
-            //    else
-            //    {
-
-            //        {
-            //            MessageBox.Show("Usuario o contraseña incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //    }
+           
         }
 
         private void Frmlogin_Load(object sender, EventArgs e)
@@ -118,3 +82,4 @@ namespace pruebaTP1
     }
 
 }
+
