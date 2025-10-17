@@ -10,3 +10,7 @@ Ferreyra Marcelo,  marce.reparacion@gmail.com
 Ramil Micaías,  micram2006@gmail.com
 
 Vall Matías,  matiasdvall@gmail.com
+
+Version 1.0.1 
+Fecha 17/10/2025
+El login se modifico para que haga la comprobacion una BD de access
