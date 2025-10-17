@@ -13,4 +13,4 @@ Vall Matías,  matiasdvall@gmail.com
 
 Version 1.0.1 
 Fecha 17/10/2025
-El login se modifico para que haga la comprobacion una BD de access
+El login se modifico para que haga la comprobacion en una BD de access
