@@ -43,7 +43,7 @@ namespace pruebaTP1
         private void Btnenter_Click(object sender, EventArgs e)
         {
             //Luego de Source= va la direccion de donde se encuentra el archivo de Access
-            string cadena= "provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Marcelo\\Desktop\\tp algoritmos 3-10\\TP1-Algoritmos-main\\Tp-1-Algoritmos\\bin\\Debug\\net8.0-windows\\tp_algoritmo.accdb";
+            string cadena= "provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\tp_algoritmo.accdb";
             string consulta="SELECT * FROM datos WHERE nombre='"+Txtusuario.Text+"' AND password='"+Txtpass.Text+"'";           
             OleDbConnection conexion = new OleDbConnection(cadena);
             OleDbCommand comando = new OleDbCommand(consulta, conexion);
@@ -82,4 +82,5 @@ namespace pruebaTP1
     }
 
 }
+
 
