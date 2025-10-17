@@ -17,7 +17,7 @@ namespace pruebaTP1
 
         private void Helpbutton1_Click(object? sender, EventArgs e)
         {
-            MessageBox.Show("Ingrese su usuario y contraseña para acceder.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Ingrese su usuario y contraseÃ±a para acceder.", "Ayuda", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void lnkrecu_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -42,6 +42,7 @@ namespace pruebaTP1
 
         private void Btnenter_Click(object sender, EventArgs e)
         {
+            //Luego de Source= va la direccion de donde se encuentra el archivo de Access
             string cadena= "provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Marcelo\\Desktop\\tp algoritmos 3-10\\TP1-Algoritmos-main\\Tp-1-Algoritmos\\bin\\Debug\\net8.0-windows\\tp_algoritmo.accdb";
             string consulta="SELECT * FROM datos WHERE nombre='"+Txtusuario.Text+"' AND password='"+Txtpass.Text+"'";           
             OleDbConnection conexion = new OleDbConnection(cadena);
@@ -69,7 +70,7 @@ namespace pruebaTP1
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseÃ±a incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //if (Txtusuario.Text == DatosAdmin.Nombre && Txtpass.Text == DatosAdmin.Password)
             //{
@@ -105,7 +106,7 @@ namespace pruebaTP1
             //    {
 
             //        {
-            //            MessageBox.Show("Usuario o contraseña incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //            MessageBox.Show("Usuario o contraseÃ±a incorrectos", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //        }
             //    }
         }
@@ -115,4 +116,5 @@ namespace pruebaTP1
 
         }
     }
+
 }
