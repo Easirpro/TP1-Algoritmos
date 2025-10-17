@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "bWY2/eAlv04=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marcelo\\Desktop\\tp algoritmos 3-10\\TP1-Algoritmos-main\\Tp-1-Algoritmos\\pruebaTP1\\pruebaTP1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marcelo\\.nuget\\packages\\system.configuration.configurationmanager\\10.0.0-rc.1.25451.107\\system.configuration.configurationmanager.10.0.0-rc.1.25451.107.nupkg.sha512",
+    "C:\\Users\\Marcelo\\.nuget\\packages\\system.data.oledb\\10.0.0-rc.1.25451.107\\system.data.oledb.10.0.0-rc.1.25451.107.nupkg.sha512",
+    "C:\\Users\\Marcelo\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.0-rc.1.25451.107\\system.diagnostics.eventlog.10.0.0-rc.1.25451.107.nupkg.sha512",
+    "C:\\Users\\Marcelo\\.nuget\\packages\\system.diagnostics.performancecounter\\10.0.0-rc.1.25451.107\\system.diagnostics.performancecounter.10.0.0-rc.1.25451.107.nupkg.sha512",
+    "C:\\Users\\Marcelo\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.0-rc.1.25451.107\\system.security.cryptography.protecteddata.10.0.0-rc.1.25451.107.nupkg.sha512",
+    "C:\\Users\\Marcelo\\.nuget\\packages\\system.threading.accesscontrol\\10.0.0-rc.1.25451.107\\system.threading.accesscontrol.10.0.0-rc.1.25451.107.nupkg.sha512"
+  ],
+  "logs": []
+}
