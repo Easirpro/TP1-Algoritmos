@@ -14,6 +14,8 @@ Vall Matías,  matiasdvall@gmail.com
 Version 1.0.1 
 Fecha 17/10/2025
 El login se modifico para que haga la comprobacion en una BD de access
+
+
 Version 1.0.2
 Fecha 18/10/2025
 El frmUser se conecta a BD con todas sus funcionalidades
